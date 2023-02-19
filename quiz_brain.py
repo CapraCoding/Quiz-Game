@@ -39,12 +39,14 @@ class QuizBrain:
             print(f'Your score is: {self.score}/{self.question_number}')
 
         elif user_answer.lower() == 'stop':
+            self.question_number += -1
             self.finish()
         else:
             print('Your answer was wrong!')
             print(f'Your score is: {self.score}/{self.question_number}')
 
     def finish(self):
+        print('')
         if self.score >= 3:
             print('Congratulations!')
             print(f'Your score was: {self.score}/{self.question_number}')
